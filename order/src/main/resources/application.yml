@@ -1,0 +1,26 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-order
+  zipkin:
+    base-url: http://192.168.1.104:9411
+  sleuth:
+    sampler:
+      # 采样率值介于 0 到 1之间，1表示全部采集
+      probability: 1
+#  cloud:
+#    #注册到zookeeper地址
+#    zookeeper:
+#      connect-string: 192.168.1.104:2181
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka,http://eureka7001.com:7001/eureka
+      # 是否下载注册表 默认是true，
+    fetch-registry: true
+    # 将自己注册到Eureka中
+    register-with-eureka: true

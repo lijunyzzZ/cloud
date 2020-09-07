@@ -1,0 +1,24 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.1.104:80
+        file-extension: yaml
+        ext-config:
+          - data-id: nacos-config.yaml
+#        namespace: 9892dfe0-8fc2-4133-b4bf-745b364ee66d
+#        refreshable-dataids: commons2.yaml,
+#        shared-dataids: commons2.yaml
+#        group: DEV
+
+#        ext-config:
+#          - data-id: commons1.yaml
+#          - data-id: commons2.yaml
+#            group: DEV
+#          - data-id: nacos-config-dev.yaml
+#            group: refresh
+#            refresh: true

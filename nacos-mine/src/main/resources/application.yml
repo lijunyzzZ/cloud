@@ -1,0 +1,16 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: nacos-mine-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.104:80
+      # server-addr: localhost:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

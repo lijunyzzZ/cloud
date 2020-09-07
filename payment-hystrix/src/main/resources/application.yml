@@ -1,0 +1,17 @@
+server:
+  port: 8004
+spring:
+  application:
+    name: hystrix-payment
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka,http://eureka7001.com:7001/eureka
+      # 是否下载注册表 默认是true，
+    fetch-registry: true
+    # 将自己注册到Eureka中
+    register-with-eureka: true
+  instance:
+    instance-id: payment8004
+    prefer-ip-address: true

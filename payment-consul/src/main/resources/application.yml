@@ -1,0 +1,9 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: consul-payment
+  cloud:
+    consul:
+      discovery:
+        service-name: ${spring.application.name}
